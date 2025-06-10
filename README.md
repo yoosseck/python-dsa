@@ -17,6 +17,7 @@ try to get the hang of  data structures &amp; algorithms
   ### Search
   - Linear Search
   - Binary Search
+  - Hash Table
 
 
   ## References:
