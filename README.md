@@ -22,8 +22,12 @@ try to get the hang of  data structures &amp; algorithms
 
   ## References:
   
-  - GeeksforGeeks
-      ### https://www.geeksforgeeks.org/
+  - ### GeeksforGeeks
+      https://www.geeksforgeeks.org/
+
+  - ### W3schools
+      https://www.w3schools.com/
     
-  - プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
-      ### https://amzn.asia/d/32YoqjH
+  - ### プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
+      https://amzn.asia/d/32YoqjH 
+
