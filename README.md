@@ -8,6 +8,8 @@ try to get the hang of  data structures &amp; algorithms
   - Bubble Sort
   - Selection Sort
   - Shell Sort
+  - Merge Sort
+  - Quick Sort
 
   ### Data Structures
   - Stack
