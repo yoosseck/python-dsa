@@ -10,6 +10,7 @@ try to get the hang of  data structures &amp; algorithms
   - Shell Sort
   - Merge Sort
   - Quick Sort
+  - Counting Sort
 
   ### Data Structures
   - Stack
@@ -20,6 +21,13 @@ try to get the hang of  data structures &amp; algorithms
   - Linear Search
   - Binary Search
   - Hash Table
+
+  # Trees
+  - Rooted Trees
+  - Binary Trees
+  - Tree Walk
+  - Binary Search Trees
+  
 
 
   ## References:
