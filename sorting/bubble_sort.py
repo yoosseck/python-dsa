@@ -18,8 +18,7 @@ def bubble_sort(numbers):
     }
 
 
-if __name__ == '__main__':
-    num_list = [3, 8, 2, 4, 6, 1]
-    print(num_list)
-    result = bubble_sort(numbers=num_list)
-    print(result)
+num_list = [3, 8, 2, 4, 6, 1]
+print(num_list)
+result = bubble_sort(numbers=num_list)
+print(result)

@@ -25,11 +25,10 @@ class Queue:
         return len(self.items)
 
 
-# if __name__ == "__main__":
-#     queue = Queue()
+queue = Queue()
 
-#     for i in range(7, 17):
-#         queue.enqueue(i)
+for i in range(7, 17):
+    queue.enqueue(i)
 
-#     for i in range(10):
-#         print('dequeue: ', i, queue.dequeue())
+for i in range(10):
+    print('dequeue: ', i, queue.dequeue())

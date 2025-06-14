@@ -4,6 +4,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 # Create a LinkedList class
 class LinkedList:
     def __init__(self):
@@ -96,7 +97,9 @@ class LinkedList:
 
         current_node = self.head
         position = 0
-        while current_node is not None and current_node.next is not None and position + 1 != index:
+
+        while (current_node is not None and
+               current_node.next is not None and position + 1 != index):
             position += 1
             current_node = current_node.next
 

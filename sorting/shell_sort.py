@@ -23,10 +23,9 @@ def shell_sort(numbers):
     return numbers
 
 
-if __name__ == '__main__':
-    nums = list(range(8))
-    nums_copy = nums.copy()
-    shuffle(nums_copy)
-    print(f"before: {nums_copy}")
-    sorted_nums = shell_sort(numbers=nums_copy)
-    print(f"after: {sorted_nums}")
+nums = list(range(8))
+nums_copy = nums.copy()
+shuffle(nums_copy)
+print(f"before: {nums_copy}")
+sorted_nums = shell_sort(numbers=nums_copy)
+print(f"after: {sorted_nums}")

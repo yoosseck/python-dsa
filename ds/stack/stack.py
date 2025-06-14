@@ -18,17 +18,16 @@ class Stack:
         if not self.is_empty():
             return self.items[-1]
         else:
-            raise  IndexError("cannot peek from empty stack")
+            raise IndexError("cannot peek from empty stack")
 
     def size(self):
         return len(self.items)
 
 
-# if __name__ == "__main__":
-#     stack = Stack()
-#
-#     for i in range(10):
-#         stack.push(i)
-#
-#     for i in range(10):
-#         print("Pop from stack:", i, stack.pop())
+stack = Stack()
+
+for i in range(10):
+    stack.push(i)
+
+for i in range(10):
+    print("Pop from stack:", i, stack.pop())

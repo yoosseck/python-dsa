@@ -19,10 +19,9 @@ def selection_sort(nums):
     return nums
 
 
-if __name__ == '__main__':
-    numbers = list(range(15))
-    nums_copy = numbers.copy()
-    shuffle(numbers)
-    sorted_numbers = selection_sort(nums=nums_copy)
-    print('unsorted:', numbers)
-    print('sorted:', sorted_numbers)
+numbers = list(range(15))
+nums_copy = numbers.copy()
+shuffle(numbers)
+sorted_numbers = selection_sort(nums=nums_copy)
+print('unsorted:', numbers)
+print('sorted:', sorted_numbers)

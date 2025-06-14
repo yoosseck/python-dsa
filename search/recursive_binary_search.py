@@ -3,13 +3,13 @@ def recursive_binary_search(arr, key, low, high):
     while low <= high:
 
         mid = (high + low) // 2
-        
+
         print(f"key: {key}", mid, high, low)
 
         if arr[mid] == key:
             return mid
         elif arr[mid] > key:
-            return recursive_binary_search(arr, key, low, mid -1)
+            return recursive_binary_search(arr, key, low, mid - 1)
         elif arr[mid] < key:
             return recursive_binary_search(arr, key, mid + 1, high)
 

@@ -36,6 +36,5 @@ def polish_notation(expression):
     print(result)
 
 
-# if __name__ == "__main__":
-#     expression = "+ 9 * 2 3"
-#     polish_notation(expression)
+expression = "+ 9 * 2 3"
+polish_notation(expression)

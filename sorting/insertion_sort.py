@@ -14,9 +14,7 @@ def insertion_sort(numbers):
     return numbers
 
 
-# if __name__ == '__main__':
-#     result = insertion_sort(numbers=[5, 2, 4, 6, 1, 3])
-#     print(result)
+result = insertion_sort(numbers=[5, 2, 4, 6, 1, 3])
+print(result)
 
-
-    # Output: 1, 2, 3, 4, 5, 6
+# Output: 1, 2, 3, 4, 5, 6
