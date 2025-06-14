@@ -25,9 +25,7 @@ try to get the hang of  data structures &amp; algorithms
   # Trees
   - Rooted Trees
   - Binary Trees
-  - Tree Walk
-  - Binary Search Trees
-  
+  - Tree Traverse
 
 
   ## References:
