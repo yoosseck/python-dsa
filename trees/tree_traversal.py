@@ -67,6 +67,13 @@ class TreeTraversal:
 
     # ============ ITERATIVE IMPLEMENTATIONS ============
     def preorder_iterative(self, root: TreeNode):
+        """
+        Order:
+            Root -> Left - Right
+        Usage:
+            copy
+            prefix expression generation
+        """
         if not root:
             return []
 
@@ -85,7 +92,13 @@ class TreeTraversal:
         return result
 
     def inorder_iterative(self, root: TreeNode):
-
+        """
+        Order:
+            Left -> Root - Right
+        Usage:
+            Binary Search Trees - places nodes in sorted order
+            infix expression generation
+        """
         result = []
         stack = []
         current = root
@@ -103,6 +116,14 @@ class TreeTraversal:
         return result
 
     def postorder_iterative(self, root: TreeNode):
+        """
+        Order:
+            Left -> Right -> Root
+        Usage:
+            delete
+            calculate directory sizes
+            generate postfix expressions
+        """
         if not root:
             return []
 
@@ -195,14 +216,13 @@ def build_sample_tree():
     /
     H(8)
     """
-    h = TreeNode(8)
-    d = TreeNode(4, h, None)
-    e = TreeNode(5)
-    f = TreeNode(6)
-    g = TreeNode(7)
-    b = TreeNode(2, d, e)
-    c = TreeNode(3, f, g)
-    a = TreeNode(1, b, c)
+    d = TreeNode('D')
+    e = TreeNode('E')
+    f = TreeNode('F')
+    g = TreeNode('G')
+    b = TreeNode('B', d, e)
+    c = TreeNode('C', f, g)
+    a = TreeNode('A', b, c)
     return a
 
 
@@ -213,7 +233,7 @@ print("🌳 TREE STRUCTURE:")
 print_tree_structure(root)
 print("\n" + "="*50)
 
-# Demonstrate all traversals
+Demonstrate all traversals
 print("\nRECURSIVE TRAVERSALS:")
 print(f"Pre-order (Root→Left→Right):  {traversal.preorder_recursive(root)}")
 print(f"In-order (Left→Root→Right):   {traversal.inorder_recursive(root)}")
