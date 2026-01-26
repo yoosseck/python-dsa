@@ -233,7 +233,7 @@ print("🌳 TREE STRUCTURE:")
 print_tree_structure(root)
 print("\n" + "="*50)
 
-Demonstrate all traversals
+# Demonstrate all traversals
 print("\nRECURSIVE TRAVERSALS:")
 print(f"Pre-order (Root→Left→Right):  {traversal.preorder_recursive(root)}")
 print(f"In-order (Left→Root→Right):   {traversal.inorder_recursive(root)}")
