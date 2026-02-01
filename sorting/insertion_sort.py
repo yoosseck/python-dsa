@@ -1,20 +1,19 @@
-def insertion_sort(numbers):
+def insertion_sort(arr):
+    
+    for i in range(1, len(arr)):
+        key = arr[i]
+        
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j+1] = arr[j]
+            j -= 1
+        
+        arr[j+1] = key
+    
+    return arr
+        
 
-    for i in range(0, 6):
-        j = i + 1
-
-        while j < len(numbers):
-            if numbers[i] > numbers[j]:
-                temp = numbers[i]
-                numbers[i] = numbers[j]
-                numbers[j] = temp
-
-            j += 1
-
-    return numbers
-
-
-result = insertion_sort(numbers=[5, 2, 4, 6, 1, 3])
+result = insertion_sort(arr=[5, 2, 4, 6, 1, 3])
 print(result)
 
 # Output: 1, 2, 3, 4, 5, 6
