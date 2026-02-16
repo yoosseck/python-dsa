@@ -1,5 +1,5 @@
 from json import dumps
-
+from collections import deque
 
 class Node:
     def __init__(self, value):
@@ -100,10 +100,10 @@ class BinarySearchTree:
     def breadth_first_search(self):
         current_node = self.root
         items = []
-        queue = [current_node]
+        queue = deque([current_node])
 
         while len(queue) > 0:
-            current_node = queue.pop(0)
+            current_node = queue.popleft()
             items.append(current_node.value)
             if current_node.left:
                 queue.append(current_node.left)
@@ -116,7 +116,7 @@ class BinarySearchTree:
         if len(queue) == 0:
             return list
 
-        current_node = queue.pop(0)
+        current_node = queue.popleft()
         list.append(current_node.value)
 
         if current_node.left:
@@ -150,6 +150,6 @@ tree.insert(1)
 tree.remove(170)
 
 print("BFS:", tree.breadth_first_search())
-print("BFS recursive:", tree.breadth_first_search_recursive([tree.root], []))
+print("BFS recursive:", tree.breadth_first_search_recursive(deque([tree.root]), []))
 print("Lookup 20:", tree.lookup(20).value if tree.lookup(20) else None)
 print("Tree JSON:", dumps(traverse(tree.root), indent=2))

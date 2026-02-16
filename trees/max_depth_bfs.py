@@ -1,3 +1,6 @@
+from collections import deque
+
+
 class TreeNode:
     def __init__(self, data=0, left=None, right=None):
         self.data = data
@@ -11,7 +14,7 @@ class TreeTraversal:
         if not root:
             return 0
         
-        queue = [root]
+        queue = deque([root])
         depth = 0
         
         while queue:
@@ -19,7 +22,7 @@ class TreeTraversal:
             depth += 1
             
             for _ in range(level_size):
-                node = queue.pop(0)
+                node = queue.popleft()
                 if node.left:
                     queue.append(node.left)
                 if node.right:

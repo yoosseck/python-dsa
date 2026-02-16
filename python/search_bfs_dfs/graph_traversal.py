@@ -1,3 +1,6 @@
+from collections import deque
+
+
 class Graph:
     def __init__(self):
         self.graph = {}  # adjacency list
@@ -16,11 +19,11 @@ class Graph:
         if start not in self.graph:
             return []
         visited = {start}
-        queue = [start]  # list used as queue
+        queue = deque([start])  # list used as queue
         result = []
 
         while queue:
-            node = queue.pop(0)   # remove from front (O(n))
+            node = queue.popleft()   # remove from front (O(n))
             result.append(node)
             for neighbor in self.graph[node]:
                 if neighbor not in visited:

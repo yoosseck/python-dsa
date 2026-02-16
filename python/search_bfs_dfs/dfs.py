@@ -1,3 +1,6 @@
+from collections import deque
+
+
 class Node:
     def __init__(self, value):
         self.left = None
@@ -94,10 +97,10 @@ class BinarySearchTree:
     def breadth_first_search(self):
         currentNode = self.root
         result = []
-        queue = [currentNode]
-
+        queue = deque([currentNode])
+        
         while len(queue) > 0:
-            currentNode = queue.pop(0)
+            currentNode = queue.popleft()
             result.append(currentNode.value)
             if currentNode.left:
                 queue.append(currentNode.left)
@@ -109,7 +112,7 @@ class BinarySearchTree:
         if len(queue) == 0:
             return result
 
-        currentNode = queue.pop(0)
+        currentNode = queue.popleft()
         result.append(currentNode.value)
 
         if currentNode.left:
@@ -178,7 +181,7 @@ tree.insert(15)
 tree.insert(1)
 
 print("BFS:", tree.breadth_first_search())
-print("BFS Recursive:", tree.breadth_first_search_recursive([tree.root], []))
+print("BFS Recursive:", tree.breadth_first_search_recursive(deque([tree.root]), []))
 print("DFS In Order:", tree.dfs_in_order())
 print("DFS Pre Order:", tree.dfs_pre_order())
 print("DFS Post Order:", tree.dfs_post_order())

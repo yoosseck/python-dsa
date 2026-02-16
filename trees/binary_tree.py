@@ -1,3 +1,4 @@
+from collections import deque
 from random import randint
 
 
@@ -23,10 +24,10 @@ class BinaryTree:
             print(f"  → {data} set as root")
             return
 
-        queue = [self.root]
+        queue = deque([self.root])
 
         while queue:
-            current = queue.pop(0)
+            current = queue.popleft()
 
             if current.left is None:
                 current.left = new_node
@@ -85,10 +86,10 @@ class BinaryTree:
 
         print("Tree structure: ")
         levels = []
-        queue = [(self.root, 0)]
+        queue = deque([(self.root, 0)])
 
         while queue:
-            node, level = queue.pop(0)
+            node, level = queue.popleft()
 
             if len(levels) <= level:
                 levels.append([])
